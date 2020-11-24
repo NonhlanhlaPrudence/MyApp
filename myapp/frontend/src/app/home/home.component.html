@@ -1,0 +1,29 @@
+<div class="container">
+
+  <hr class="my-5">
+
+  <div class="jumbotron grey lighten-2">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple Angular and Material Design Bootstrap setup project for everyone.</p>
+    <p class="lead">Angular router module already setup for you.</p>
+    <small class="lead"></small>
+    <hr class="my-2">
+    <a mdbBtn color="mdb-color" outline="true" size="lg" href="https://mdbootstrap.com/docs/angular/" target="_blank"
+      role="button" mdbWavesEffect>
+      Check More MDBootstrap Components
+    </a>
+
+          <h3> {{currentUser.name}}</h3>
+
+<ul>
+    <li *ngFor="let user of users">
+        {{user.email}} ({{user.name}} {{user.surame}})
+         <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
+    </li>
+</ul>
+  </div>
+
+  <div class="row">
+    <button mdbBtn type="button" color="primary" [routerLink]="['/register']" routerLinkActive="router-link-active"  mdbWavesEffect>Register</button>
+    <button mdbBtn type="button" color="default" [routerLink]="['/login']" routerLinkActive="router-link-active"  mdbWavesEffect>Login
+    </button>
